@@ -1,72 +1,22 @@
-let current = 0;
-
-const sections = document.querySelectorAll("section");
-const container = document.getElementById("container");
 const links = document.querySelectorAll(".nav-link");
-const contents = document.querySelectorAll(".fade-up");
-const nav = document.querySelector("nav"); // 🔥 ajout
+const sections = document.querySelectorAll("section");
 
-let isScrolling = false;
+window.addEventListener("scroll", () => {
+  let current = "";
 
-function updateNav() {
-  links.forEach(link => link.classList.remove("active"));
-  links[current]?.classList.add("active");
-}
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
 
-// 🔥 gestion navbar (transparent → sombre)
-function updateNavbar() {
-  if (current === 0) {
-    nav.classList.remove("nav-scrolled");
-  } else {
-    nav.classList.add("nav-scrolled");
-  }
-}
+    if (scrollY >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
 
-function animateSection(index) {
-  contents.forEach(el => el.classList.remove("active"));
-
-  setTimeout(() => {
-    sections[index].querySelector(".fade-up")?.classList.add("active");
-  }, 200);
-}
-
-function goToSection(index) {
-  current = index;
-  container.style.transform = `translateY(-${current * 100}vh)`;
-
-  updateNav();
-  updateNavbar(); // 🔥 IMPORTANT
-  animateSection(current);
-}
-
-function handleScroll(direction) {
-  if (isScrolling) return;
-
-  isScrolling = true;
-
-  if (direction === "down") {
-    current = Math.min(current + 1, sections.length - 1);
-  } else {
-    current = Math.max(current - 1, 0);
-  }
-
-  goToSection(current);
-
-  setTimeout(() => {
-    isScrolling = false;
-  }, 900);
-}
-
-window.addEventListener("wheel", (e) => {
-  if (Math.abs(e.deltaY) < 50) return;
-
-  if (e.deltaY > 0) handleScroll("down");
-  else handleScroll("up");
-});
-
-links.forEach((link, index) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    goToSection(index);
+  links.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
   });
 });

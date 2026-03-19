@@ -3,140 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LHM - Nettoyage de toiture</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>HM - Redonnez vie à votre toiture</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white font-sans">
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-transparent">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-       <div class="text-2xl">LHM</div>
-
-      <!-- 🔥 caché mobile -->
-      <div class="hidden md:flex gap-6 text-sm">
-        <a href="#" class="nav-link active">Accueil</a>
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">Réalisations</a>
-        <a href="#" class="nav-link">Contact</a>
-      </div>
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-black/50 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">LHM</div>
+    <div class="hidden md:flex gap-8">
+      <a href="#services" class="hover:text-yellow-400">Services</a>
+      <a href="#realisations" class="hover:text-yellow-400">Réalisations</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- CONTAINER -->
-  <div id="container" class="w-full h-full transition-transform duration-700 ease-in-out">
+<!-- HERO -->
+<section class="relative h-screen flex items-center justify-center text-center">
 
-    <!-- HERO -->
-    <section class="relative h-screen flex items-center justify-center text-center">
-      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4"
-           class="absolute inset-0 w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 px-6 fade-up active">
-        <h1 class="text-5xl font-bold mb-4 uppercase">Redonnez vie à votre toiture</h1>
-        <p class="mb-6 text-yellow-500 font-bold">Nettoyage écologique à la vapeur, sans chimie – Résultat durable et respectueux de votre toit</p>
-        <div class="flex justify-center gap-4">
-          <button class="bg-yellow-500 text-black px-6 py-3 rounded-full">Contacter</button>
-          <button class="border px-6 py-3 rounded-full animate-pulse">
-            <i class="fa-solid fa-phone"></i>
-            Appeler
-          </button>
-        </div>
-      </div>
+  <img src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+       class="absolute inset-0 w-full h-full object-cover">
 
-    </section>
+  <div class="absolute inset-0 bg-black/70"></div>
 
-    <!-- SERVICES -->
-    <section class="h-screen flex items-center justify-center bg-gray-300 text-black">
+  <div class="relative z-10 max-w-3xl px-6">
+
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      Nettoyage de toiture<br>
+      <span class="text-yellow-400">écologique</span>
+    </h1>
+
+    <p class="text-lg text-gray-300 mb-8">
+      Démoussage à la vapeur basse pression, sans produits chimiques.  
+      Résultat durable et respectueux de votre toiture.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#contact" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold">
+        Devis gratuit
+      </a>
+      <a href="tel:0600000000" class="border px-6 py-3 rounded-full">
+        <i class="fa-solid fa-phone mr-2"></i> Appeler
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 bg-black">
+
   <div class="max-w-6xl mx-auto px-6 text-center">
 
-    <h2 class="text-4xl font-bold mb-4">
+    <h2 class="text-4xl font-bold mb-12">
       Nos services
     </h2>
 
-    <p class="text-gray-600 mb-12">
-      Des solutions écologiques et durables pour entretenir votre toiture
-    </p>
+    <div class="grid md:grid-cols-3 gap-10">
 
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Service 1 -->
-      <div class="p-6 rounded-xl bg-gray-50 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-3xl mb-4">
-          <i class="fa-solid fa-water"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">
-          Nettoyage vapeur
-        </h3>
-        <p class="text-gray-600">
-          Nettoyage en profondeur à la vapeur basse pression, respectueux de votre toiture.
+      <div class="p-8 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+        <i class="fa-solid fa-water text-yellow-400 text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Nettoyage vapeur</h3>
+        <p class="text-gray-400">
+          Nettoyage en profondeur à la vapeur basse pression.
         </p>
       </div>
 
-      <!-- Service 2 -->
-      <div class="p-6 rounded-xl bg-gray-50 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-3xl mb-4">
-          <i class="fa-solid fa-leaf"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">
-          Démoussage écologique
-        </h3>
-        <p class="text-gray-600">
-          Élimination des mousses sans produits chimiques, méthode naturelle et durable.
+      <div class="p-8 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+        <i class="fa-solid fa-leaf text-yellow-400 text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Démoussage écologique</h3>
+        <p class="text-gray-400">
+          Sans produits chimiques, respectueux de l’environnement.
         </p>
       </div>
 
-      <!-- Service 3 -->
-      <div class="p-6 rounded-xl bg-gray-50 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-3xl mb-4">
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">
-          Petite rénovation
-        </h3>
-        <p class="text-gray-600">
-          Remplacement de tuiles et réparations légères pour prolonger la durée de vie de votre toiture.
+      <div class="p-8 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+        <i class="fa-solid fa-screwdriver-wrench text-yellow-400 text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Petite rénovation</h3>
+        <p class="text-gray-400">
+          Réparation et remplacement de tuiles.
         </p>
       </div>
-
-    </div>
-
-  </div>
-</section>
-
-    <!-- REALISATIONS -->
-   <section id="realisations" class="relative h-screen bg-black">
-
-  <div class="h-full w-full">
-
-    <!-- Galerie -->
-    <div class="grid grid-cols-2 md:grid-cols-4 h-full">
-
-      <img src="src/images/1.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/2.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/3.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/4.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/5.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/6.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/7.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-
-      <img src="src/images/8.jpg"
-           class="w-full h-full object-cover hover:scale-105 transition duration-500" />
 
     </div>
 
@@ -144,17 +98,176 @@
 
 </section>
 
-    <!-- CONTACT -->
-    <section class="h-screen flex items-center justify-center bg-black">
-      <div class="text-center fade-up">
-        <h2 class="text-4xl font-bold mb-6">Contact</h2>
-        <p>📞 06 00 00 00 00</p>
-      </div>
-    </section>
+<!-- REALISATIONS -->
+<section id="realisations" class="bg-black py-24">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-4xl font-bold mb-16 text-center">
+      Nos réalisations
+    </h2>
+
+    <div class="columns-2 md:columns-3 gap-4 space-y-4">
+
+      <img src="src/images/1.jpg" class="w-full rounded-xl">
+      <img src="src/images/2.jpg" class="w-full rounded-xl">
+      <img src="src/images/3.jpg" class="w-full rounded-xl">
+      <img src="src/images/4.jpg" class="w-full rounded-xl">
+      <img src="src/images/5.jpg" class="w-full rounded-xl">
+      <img src="src/images/6.jpg" class="w-full rounded-xl">
+      <img src="src/images/7.jpg" class="w-full rounded-xl">
+      <img src="src/images/8.jpg" class="w-full rounded-xl">
+
+    </div>
 
   </div>
 
-  <script src="script.js"></script>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-black py-24">
+
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- INFOS -->
+      <div>
+
+        <h2 class="text-4xl font-bold mb-4 text-center md:text-left">
+  Contactez-nous
+</h2>
+
+        <p class="text-gray-400 mb-8">
+          Devis gratuit – Intervention rapide – Résultat durable
+        </p>
+
+        <div class="space-y-4 text-gray-300">
+
+          <p>
+            <i class="fa-solid fa-phone text-yellow-400 mr-3"></i>
+            06 00 00 00 00
+          </p>
+
+          <p>
+            <i class="fa-solid fa-location-dot text-yellow-400 mr-3"></i>
+            Rouen et alentours
+          </p>
+
+          <p>
+            <i class="fa-solid fa-leaf text-yellow-400 mr-3"></i>
+            100% écologique
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10">
+
+        <form class="space-y-4">
+
+          <!-- Nom -->
+          <div class="relative">
+            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" placeholder="Nom"
+              class="w-full pl-12 pr-4 py-4 rounded-lg bg-black/30 border border-white/10 focus:outline-none focus:border-yellow-400 transition">
+          </div>
+
+          <!-- Email -->
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="email" placeholder="Email"
+              class="w-full pl-12 pr-4 py-4 rounded-lg bg-black/30 border border-white/10 focus:outline-none focus:border-yellow-400 transition">
+          </div>
+
+          <!-- Message -->
+          <div class="relative">
+            <i class="fa-solid fa-pen absolute left-4 top-4 text-gray-400"></i>
+            <textarea placeholder="Votre message"
+              class="w-full pl-12 pr-4 py-4 rounded-lg bg-black/30 border border-white/10 h-32 focus:outline-none focus:border-yellow-400 transition"></textarea>
+          </div>
+
+          <!-- Bouton -->
+          <button type="button"
+            class="w-full bg-yellow-400 text-black py-4 rounded-full font-semibold hover:bg-yellow-300 transition">
+            Envoyer le message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer class="bg-black border-t border-white/10 py-12">
+
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-gray-400 text-sm">
+
+    <!-- Logo / présentation -->
+    <div>
+      <h3 class="text-white text-lg font-bold mb-4">LHM</h3>
+      <p>
+        Spécialiste du nettoyage de toiture écologique à la vapeur basse pression.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Navigation</h3>
+      <ul class="space-y-2">
+        <li><a href="#hero" class="hover:text-yellow-400 transition">Accueil</a></li>
+        <li><a href="#services" class="hover:text-yellow-400 transition">Services</a></li>
+        <li><a href="#realisations" class="hover:text-yellow-400 transition">Réalisations</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact + réseaux -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Contact</h3>
+
+      <ul class="space-y-3">
+        <li>
+          <i class="fa-solid fa-phone mr-2 text-yellow-400"></i>
+          06 00 00 00 00
+        </li>
+
+        <li>
+          <i class="fa-solid fa-location-dot mr-2 text-yellow-400"></i>
+          Rouen et alentours
+        </li>
+      </ul>
+
+      <!-- Réseaux sociaux -->
+      <div class="flex gap-4 mt-6">
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-yellow-400 hover:text-black transition">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-yellow-400 hover:text-black transition">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bas -->
+  <div class="text-center text-gray-500 text-xs mt-10">
+    © 2026 CodeDragi – Tous droits réservés
+  </div>
+
+</footer>
 
 </body>
 </html>
