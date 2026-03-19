@@ -4,12 +4,22 @@ const sections = document.querySelectorAll("section");
 const container = document.getElementById("container");
 const links = document.querySelectorAll(".nav-link");
 const contents = document.querySelectorAll(".fade-up");
+const nav = document.querySelector("nav"); // 🔥 ajout
 
 let isScrolling = false;
 
 function updateNav() {
   links.forEach(link => link.classList.remove("active"));
   links[current]?.classList.add("active");
+}
+
+// 🔥 gestion navbar (transparent → sombre)
+function updateNavbar() {
+  if (current === 0) {
+    nav.classList.remove("nav-scrolled");
+  } else {
+    nav.classList.add("nav-scrolled");
+  }
 }
 
 function animateSection(index) {
@@ -23,7 +33,9 @@ function animateSection(index) {
 function goToSection(index) {
   current = index;
   container.style.transform = `translateY(-${current * 100}vh)`;
+
   updateNav();
+  updateNavbar(); // 🔥 IMPORTANT
   animateSection(current);
 }
 
