@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>HM - Redonnez vie à votre toiture</title>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+       <div class="text-2xl">LHM</div>
+
+      <!-- 🔥 caché mobile -->
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="#" class="nav-link active">Accueil</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Réalisations</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTAINER -->
+  <div id="container" class="w-full h-full transition-transform duration-700 ease-in-out">
+
+    <!-- HERO -->
+    <section class="relative h-screen flex items-center justify-center text-center">
+
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4"
+           class="absolute inset-0 w-full h-full object-cover" />
+
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <div class="relative z-10 px-6 fade-up active">
+        <h1 class="text-5xl font-bold mb-4 uppercase">Redonnez vie à votre toiture</h1>
+        <p class="mb-6">Nettoyage écologique à la vapeur, sans chimie – Résultat durable et respectueux de votre toit</p>
+
+        <div class="flex justify-center gap-4">
+          <button class="bg-yellow-500 text-black px-6 py-3 rounded-full">Contacter</button>
+          <button class="border px-6 py-3 rounded-full animate-pulse">
+            <i class="fa-solid fa-phone"></i>
+            Appeler
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section class="h-screen flex items-center justify-center bg-gray-700 text-black">
+      <div class="text-center fade-up">
+        <h2 class="text-4xl font-bold mb-10">Services</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-gray-100 rounded-xl">Rénovation</div>
+          <div class="p-6 bg-gray-100 rounded-xl">Réparation</div>
+          <div class="p-6 bg-gray-100 rounded-xl">Nettoyage</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REALISATIONS -->
+    <section class="h-screen flex items-center justify-center bg-gray-900">
+      <div class="text-center fade-up">
+        <h2 class="text-4xl font-bold mb-10">Réalisations</h2>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="h-40 bg-gray-700 rounded"></div>
+          <div class="h-40 bg-gray-700 rounded"></div>
+          <div class="h-40 bg-gray-700 rounded"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="h-screen flex items-center justify-center bg-black">
+      <div class="text-center fade-up">
+        <h2 class="text-4xl font-bold mb-6">Contact</h2>
+        <p>📞 06 00 00 00 00</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
